@@ -1,0 +1,7 @@
+services:
+  n-kudo-web:
+    build: .
+    ports:
+      - "8080:80"
+    restart: always
+    container_name: n-kudo-web
