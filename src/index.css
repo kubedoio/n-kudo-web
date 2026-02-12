@@ -10,14 +10,48 @@
 }
 
 @layer base {
+    :root {
+        --bg-color: #ffffff;
+        --text-color: #0f172a;
+        --card-bg: #ffffff;
+        --card-border: rgba(30, 41, 59, 0.1);
+        --nav-bg: rgba(255, 255, 255, 0.7);
+    }
+
+    .dark {
+        --bg-color: #020617;
+        --text-color: #f8fafc;
+        --card-bg: #1e293b;
+        /* Slightly lighter for dark mode cards */
+        --card-border: rgba(255, 255, 255, 0.05);
+        --nav-bg: rgba(2, 6, 23, 0.8);
+    }
+
     body {
-        @apply bg-[#f8fafc] text-brand-dark font-sans antialiased;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        @apply font-sans antialiased transition-colors duration-300;
     }
 }
 
 @layer components {
     .premium-card {
-        @apply bg-white border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-2xl p-8 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300;
+        background-color: var(--card-bg);
+        border: 1px solid var(--card-border);
+        @apply rounded-2xl p-8 transition-all duration-300;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    }
+
+    .dark .premium-card {
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .premium-card:hover {
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .dark .premium-card:hover {
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
     }
 
     .btn-primary {
@@ -25,10 +59,23 @@
     }
 
     .btn-secondary {
-        @apply bg-white text-brand-slate border border-slate-200 px-6 py-3 rounded-lg font-semibold hover:bg-slate-50 transition-all duration-300 flex items-center gap-2;
+        background-color: var(--card-bg);
+        color: var(--text-color);
+        border: 1px solid var(--card-border);
+        @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2;
     }
-    
+
+    .btn-secondary:hover {
+        @apply bg-slate-50;
+    }
+
+    .dark .btn-secondary:hover {
+        @apply bg-slate-800;
+    }
+
     .glass-effect {
-        @apply bg-white/70 backdrop-blur-md border border-white/20;
+        background-color: var(--nav-bg);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--card-border);
     }
 }
