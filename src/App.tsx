@@ -50,7 +50,7 @@ const WorkloadFlow = () => (
             <item.icon className="w-6 h-6 text-brand-blue" />
           </div>
           <div className="text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-widest">{item.step}</div>
-          <h4 className="font-bold text-brand-dark dark:text-white mb-2">{item.title}</h4>
+          <h4 className="font-bold text-slate-900 dark:text-white mb-2">{item.title}</h4>
           <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">{item.desc}</p>
         </div>
       ))}
@@ -77,7 +77,7 @@ const ArchitectureGraph = () => (
           ].map((item, idx) => (
             <div key={idx} className="p-4 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex flex-col items-center text-center gap-2">
               <item.icon className="w-5 h-5 text-brand-blue" />
-              <div className="text-xs font-bold text-brand-dark dark:text-white leading-tight">{item.name}</div>
+              <div className="text-xs font-bold text-slate-900 dark:text-white leading-tight">{item.name}</div>
               <div className="text-[10px] text-slate-400 font-mono">{item.sub}</div>
             </div>
           ))}
@@ -99,7 +99,7 @@ const ArchitectureGraph = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Agent Box */}
           <div className="p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 border-l-4 border-l-brand-blue">
-            <h4 className="text-sm font-bold mb-4 flex items-center gap-2 text-brand-dark dark:text-white">
+            <h4 className="text-sm font-bold mb-4 flex items-center gap-2 text-slate-900 dark:text-white">
               <Terminal className="w-4 h-4 text-brand-blue" /> nkudo-edge Agent
             </h4>
             <div className="grid grid-cols-2 gap-2 text-[10px]">
@@ -110,7 +110,7 @@ const ArchitectureGraph = () => (
           </div>
           {/* Hypervisor Box */}
           <div className="p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 border-l-4 border-l-accent flex flex-col justify-center">
-            <h4 className="text-sm font-bold mb-4 flex items-center gap-2 text-brand-dark dark:text-white">
+            <h4 className="text-sm font-bold mb-4 flex items-center gap-2 text-slate-900 dark:text-white">
               <Cpu className="w-4 h-4 text-accent" /> Cloud Hypervisor
             </h4>
             <div className="space-y-4">
@@ -139,7 +139,7 @@ const Navbar = ({ theme, setTheme }: { theme: string, setTheme: (t: string) => v
           <div className="bg-brand-blue p-1.5 rounded-lg shadow-lg shadow-brand-blue/20">
             <Server className="w-5 h-5 text-white" />
           </div>
-          <span className="text-xl font-bold tracking-tight text-brand-dark dark:text-white">n-kudo</span>
+          <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">n-kudo</span>
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-400">
           <a href="#how-it-works" className="hover:text-brand-blue transition-colors">How it Works</a>
@@ -171,9 +171,9 @@ const Hero = () => (
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-blue opacity-75"></span>
           <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-blue"></span>
         </span>
-        MVP-1 Edge Platform
+        Sovereign Edge Platform
       </div>
-      <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1] text-brand-dark dark:text-white">
+      <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1] text-slate-900 dark:text-white">
         Cloud capabilities. <br />
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-accent">Your infrastructure.</span>
       </h1>
@@ -200,7 +200,7 @@ const Hero = () => (
             <div className="bg-slate-50 dark:bg-slate-900 w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:bg-brand-blue/10 transition-colors">
               <item.icon className="w-6 h-6 text-slate-600 dark:text-slate-400 group-hover:text-brand-blue transition-colors" />
             </div>
-            <h3 className="font-bold text-lg mb-2 text-brand-dark dark:text-white">{item.title}</h3>
+            <h3 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">{item.title}</h3>
             <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
@@ -213,7 +213,7 @@ const HowItWorks = () => (
   <section id="how-it-works" className="py-24 bg-white dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-brand-dark dark:text-white mb-4">Life of a Workload</h2>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">Life of a Workload</h2>
         <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">From declarative plan to local microVM execution.</p>
       </div>
       <WorkloadFlow />
@@ -225,9 +225,9 @@ const ArchitectureSection = () => (
   <section id="architecture" className="py-24 bg-slate-50 dark:bg-slate-900/30">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-brand-dark dark:text-white mb-4 leading-tight">System Architecture</h2>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 leading-tight">System Architecture</h2>
         <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
-          The n-kudo MVP-1 platform decouples control from execution, ensuring high availability and total data sovereignty.
+          The n-kudo platform decouples control from execution, ensuring high availability and total data sovereignty.
         </p>
       </div>
       <ArchitectureGraph />
@@ -324,7 +324,7 @@ export default function App() {
       {/* Call to Action */}
       <section className="py-24 bg-[var(--bg-color)] text-center border-t border-slate-100 dark:border-slate-800">
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-brand-dark dark:text-white">Ready to reclaim your infrastructure?</h2>
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-slate-900 dark:text-white">Ready to reclaim your infrastructure?</h2>
           <p className="text-xl text-slate-500 dark:text-slate-400 mb-10 font-light leading-relaxed">Join the early access program and start running sub-clouds on your own hardware today.</p>
           <button className="btn-primary text-xl px-12 py-6 rounded-2xl mx-auto scale-110 hover:scale-115 transform transition-all group">
             Request Early Access <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
@@ -337,7 +337,7 @@ export default function App() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             <div className="flex items-center gap-2">
               <Server className="w-5 h-5 text-brand-blue" />
-              <span className="text-lg font-bold tracking-tight text-brand-dark dark:text-white">n-kudo</span>
+              <span className="text-lg font-bold tracking-tight text-slate-900 dark:text-white">n-kudo</span>
             </div>
             <div className="flex gap-8 text-sm text-slate-500 dark:text-slate-400">
               <a href="https://github.com/kubedoio/n-kudo" target="_blank" rel="noopener noreferrer" className="hover:text-brand-blue transition-colors flex items-center gap-1 group">
