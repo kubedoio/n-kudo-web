@@ -1,0 +1,29 @@
+---
+import { Server } from 'lucide-react';
+import ThemeToggle from './ThemeToggle.jsx';
+
+---
+<nav class="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-slate-200/50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <div class="flex items-center gap-2">
+        <div class="bg-brand-blue p-1.5 rounded-lg shadow-lg shadow-brand-blue/20">
+          <Server size={20} className="text-white" />
+        </div>
+        <span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">n-kudo</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-400">
+        <a href="#how-it-works" class="hover:text-brand-blue transition-colors">How it Works</a>
+        <a href="#architecture" class="hover:text-brand-blue transition-colors">Architecture</a>
+        <a href="#features" class="hover:text-brand-blue transition-colors">Features</a>
+        <a href="#sovereignty" class="hover:text-brand-blue transition-colors">Sovereignty</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <ThemeToggle client:load />
+        <button class="btn-primary py-2 text-sm shadow-sm font-bold">
+          Access
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

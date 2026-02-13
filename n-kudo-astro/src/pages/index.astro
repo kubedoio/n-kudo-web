@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Architecture from '../components/Architecture.astro';
+import Sovereignty from '../components/Sovereignty.astro';
+import CTA from '../components/CTA.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="n-kudo | Sovereign Edge Platform">
+	<Navbar />
+	<main>
+		<Hero />
+		<HowItWorks />
+		<Architecture />
+		<Sovereignty />
+		<CTA />
+	</main>
+	<Footer />
+</Layout>
+
+<style is:global>
+	/* Any page-specific global additions can go here */
+	:root {
+		scroll-behavior: smooth;
+	}
+</style>

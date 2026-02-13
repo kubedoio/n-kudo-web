@@ -1,0 +1,25 @@
+---
+import { Code, Layers, Container, Activity } from 'lucide-react';
+---
+<div class="py-12">
+  <div class="grid md:grid-cols-4 gap-4 relative">
+    {/* Connection Lines (Desktop) */}
+    <div class="hidden md:block absolute top-[44px] left-[15%] right-[15%] h-0.5 border-t-2 border-dashed border-slate-200 dark:border-slate-800 -z-0"></div>
+
+    {[
+      { step: "01", icon: Code, title: "Define Plan", desc: "Submit declarative YAML via Control Plane API" },
+      { step: "02", icon: Layers, title: "Orchestrate", desc: "Validate and queue for target Edge Site" },
+      { step: "03", icon: Container, title: "Provision", desc: "Edge Agent executes via Cloud Hypervisor" },
+      { step: "04", icon: Activity, title: "Observe", desc: "Real-time heartbeats and JSON state sync" }
+    ].map((item) => (
+      <div class="relative z-10 flex flex-col items-center text-center p-6 bg-white dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
+        <div class="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center mb-4 border-2 border-brand-blue/20">
+          <item.icon className="w-6 h-6 text-brand-blue" />
+        </div>
+        <div class="text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-widest">{item.step}</div>
+        <h4 class="font-bold text-slate-900 dark:text-white mb-2">{item.title}</h4>
+        <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">{item.desc}</p>
+      </div>
+    ))}
+  </div>
+</div>
