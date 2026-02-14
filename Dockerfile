@@ -3,11 +3,11 @@ FROM node:20-alpine AS build
 
 WORKDIR /app
 
-# Point to n-kudo-astro
-COPY n-kudo-astro/package*.json ./
+# Point to root
+COPY package*.json ./
 RUN npm install
 
-COPY n-kudo-astro/ .
+COPY . .
 RUN npm run build
 
 # Production stage
