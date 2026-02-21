@@ -10,7 +10,7 @@ const { title, description = "Cloud capabilities. Your infrastructure." } = Astr
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -19,25 +19,10 @@ const { title, description = "Cloud capabilities. Your infrastructure." } = Astr
 		<title>{title}</title>
     <meta name="description" content={description} />
     
-    <!-- Dark Mode Init: No FOUC -->
-		<script is:inline>
-			const theme = (() => {
-				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-					return localStorage.getItem('theme');
-				}
-				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-					return 'dark';
-				}
-				return 'light';
-			})();
-		
-			if (theme === 'dark') {
-				document.documentElement.classList.add('dark');
-			} else {
-				document.documentElement.classList.remove('dark');
-			}
-			window.localStorage.setItem('theme', theme);
-		</script>
+    <!-- Fonts: Geist Sans and Geist Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400..700&family=Geist:wght@400..700&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<slot />
